@@ -1,7 +1,7 @@
 const sugarData = {
     labels: ['Test 1', 'Test 2', 'Test 3', 'Test 4'],
-    PPBS: [80, 99, 135, 150], // Example values
-    FBS: [75, 90, 110, 125] // Example values
+    PPBS: [80, 99, 135, 150], 
+    FBS: [75, 90, 110, 125] 
 };
 
 const sugarMessages = {
@@ -34,18 +34,18 @@ function updateSugarGraph() {
                 {
                     label: 'PPBS',
                     data: sugarData.PPBS,
-                    backgroundColor: 'blue', // Color for PPBS
+                    backgroundColor: 'blue', 
                     borderColor: 'black',
                     borderWidth: 1,
-                    hidden: false // Show PPBS dataset
+                    hidden: false 
                 },
                 {
                     label: 'FBS',
                     data: sugarData.FBS,
-                    backgroundColor: 'orange', // Color for FBS
+                    backgroundColor: 'orange', 
                     borderColor: 'black',
                     borderWidth: 1,
-                    hidden: true // Hide FBS dataset initially
+                    hidden: true 
                 }
             ]
         },
@@ -54,7 +54,7 @@ function updateSugarGraph() {
             maintainAspectRatio: true,
             scales: {
                 x: {
-                    stacked: false, // Use false to make grouped bars
+                    stacked: false,
                     ticks: {
                         padding: 5,
                         font: {
@@ -115,7 +115,7 @@ function updateSugarGraph() {
                         const index = legendItem.datasetIndex;
                         const meta = legend.chart.getDatasetMeta(index);
 
-                        // Toggle the visibility of the clicked dataset
+                        
                         meta.hidden = meta.hidden === null ? !legend.chart.data.datasets[index].hidden : null;
                         legend.chart.update();
                     },
@@ -173,5 +173,5 @@ function updateSugarGraph() {
     });
 }
 
-// Initialize with the updated blood sugar graph
+
 updateSugarGraph();
