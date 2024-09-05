@@ -1,8 +1,8 @@
 const data = {
     labels: ['Test 1', 'Test 2', 'Test 3', 'Test 4'],
-    HDL: [70, 58, 34, 40], // Example values
-    LDL: [80, 120, 150, 180], // Example values
-    cholesterol: [214, 198, 200, 240] // Example values
+    HDL: [70, 58, 34, 40], 
+    LDL: [80, 120, 150, 180], 
+    cholesterol: [214, 198, 200, 240] 
 };
 
 const riskColors = {
@@ -66,7 +66,7 @@ function updateGraph() {
                 backgroundColor: data[datasetLabel].map(value => riskColors[datasetLabel](value)),
                 borderColor: 'black',
                 borderWidth: 1,
-                hidden: datasetLabel !== 'HDL' // Hide all datasets except HDL
+                hidden: datasetLabel !== 'HDL' 
             }))
         },
         options: {
@@ -74,7 +74,7 @@ function updateGraph() {
             maintainAspectRatio: true,
             scales: {
                 x: {
-                    stacked: false, // Set to false to have bars side by side
+                    stacked: false, 
                     ticks: {
                         padding: 5,
                         font: {
@@ -132,7 +132,7 @@ function updateGraph() {
                 },
                 legend: {
                     display: true,
-                    position: 'top', // Position the legend at the top
+                    position: 'top', 
                     labels: {
                         font: {
                             size: 18
